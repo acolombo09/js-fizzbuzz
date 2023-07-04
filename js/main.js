@@ -18,40 +18,31 @@ Buon lavoro e buon divertimento! :faccia_leggermente_sorridente:
 */
 
 const chessContainer = document.querySelector(".chess-container");
-const totalCells = 7 * 7;
 
-for (let i = 0; i < totalCells; i++) {
+for (let i = 1; i <= 100; i++){
   let singleCell = document.createElement("div");
   singleCell.classList.add("chess-square", "m-2");
   chessContainer.append(singleCell);
-  if (i % 3 === 0) {
-    singleCell.innerHTML = (i + "fizz").toString();
-    singleCell.classList.add("bg-success");
-  } else if (i % 5 === 0) {
-    singleCell.innerHTML = (i + "buzz").toString();
-    singleCell.classList.add("bg-warning");
-  }  else if (i % 3 === 0 && i % 5 === 0) {
-      singleCell.innerHTML = (i + "fizzbuzz").toString();
-      singleCell.classList.add("bg-danger");
-  } else {
-    singleCell.innerHTML = (i + 1).toString();;
-  }
-}
-
-for (let i = 1; i <= 100; i++){
   if (i % 3 === 0 && i % 5 === 0) {
     console.log("fizzbuzz");
     singleCell.innerHTML = ("fizzbuzz").toString();
-    singleCell.classList.add("bg-danger");
+    if (singleCell.innerHTML = ("fizzbuzz")) {
+      singleCell.classList.add("bg-danger");
+    }
   } else if (i % 3 === 0) {
     console.log("fizz");
     singleCell.innerHTML = ("fizz").toString();
-    singleCell.classList.add("bg-success");
+    if (singleCell.innerHTML = ("fizz")) {
+      singleCell.classList.add("bg-success");
+    }
   } else if (i % 5 === 0) {
     console.log("buzz");
     singleCell.innerHTML = ("buzz").toString();
+    if (singleCell.innerHTML = ("buzz")) {
     singleCell.classList.add("bg-warning");
+    }
   } else {
     console.log(i);
+    singleCell.innerHTML = (i).toString();
   }
 }
