@@ -25,20 +25,22 @@ for (let i = 0; i < totalCells; i++) {
   let singleCell = document.createElement("div");
   singleCell.classList.add("chess-square", "m-2");
   singleCell.innerHTML = (i + 1).toString();
-  
-  if(i % 2 === 0){
-    singleCell.classList.add("bg-dark");
-  }
-
   chessContainer.append(singleCell);
 }
 
-//stampo in console i numeri da 1 a 100 con numeri pari
 for (let i = 1; i <= 100; i++){
-  if (i % 3 === 0) {
+  if (i % 3 === 0 && i % 5 === 0) {
+    console.log("fizzbuzz");
+    singleCell.innerHTML = ("fizzbuzz").toString();
+    singleCell.classList.add("bg-danger");
+  } else if (i % 3 === 0) {
     console.log("fizz");
+    singleCell.innerHTML = ("fizz").toString();
+    singleCell.classList.add("bg-success");
   } else if (i % 5 === 0) {
     console.log("buzz");
+    singleCell.innerHTML = ("buzz").toString();
+    singleCell.classList.add("bg-warning");
   } else {
     console.log(i);
   }
