@@ -26,9 +26,27 @@ for (let i = 0; i < totalCells; i++) {
   singleCell.classList.add("chess-square", "m-2");
   singleCell.innerHTML = (i + 1).toString();
   
-  if(i % 3 === 1){
+  if(i % 2 === 0){
     singleCell.classList.add("bg-dark");
   }
 
   chessContainer.append(singleCell);
 }
+
+//stampo in console i numeri da 1 a 100 con numeri pari
+for (let i = 1; i <= 100; i++){
+  console.log(i);
+  
+  if (i % 2 === 0) {
+    console.log("Il numero è pari");
+  }
+}
+// // stampo in console la tabellina del 3
+// for (let i = 1; i <= 100; i++) {
+//   console.log(`3 x ${i} = ${3 * i}`);
+// }
+// // stampo in console la tabellina del 5
+// for (let i = 1; i <= 100; i++) {
+//   console.log(`5 x ${i} = ${5 * i}`);
+// }
+
