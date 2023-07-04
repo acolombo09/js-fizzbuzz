@@ -21,11 +21,21 @@ const chessContainer = document.querySelector(".chess-container");
 const totalCells = 7 * 7;
 
 for (let i = 0; i < totalCells; i++) {
-  // let singleCell = `<div class="chess-square"></div>`;
   let singleCell = document.createElement("div");
   singleCell.classList.add("chess-square", "m-2");
-  singleCell.innerHTML = (i + 1).toString();
   chessContainer.append(singleCell);
+  if (i % 3 === 0) {
+    singleCell.innerHTML = (i + "fizz").toString();
+    singleCell.classList.add("bg-success");
+  } else if (i % 5 === 0) {
+    singleCell.innerHTML = (i + "buzz").toString();
+    singleCell.classList.add("bg-warning");
+  }  else if (i % 3 === 0 && i % 5 === 0) {
+      singleCell.innerHTML = (i + "fizzbuzz").toString();
+      singleCell.classList.add("bg-danger");
+  } else {
+    singleCell.innerHTML = (i + 1).toString();;
+  }
 }
 
 for (let i = 1; i <= 100; i++){
