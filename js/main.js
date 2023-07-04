@@ -35,18 +35,11 @@ for (let i = 0; i < totalCells; i++) {
 
 //stampo in console i numeri da 1 a 100 con numeri pari
 for (let i = 1; i <= 100; i++){
-  console.log(i);
-  
-  if (i % 2 === 0) {
-    console.log("Il numero è pari");
+  if (i % 3 === 0) {
+    console.log("fizz");
+  } else if (i % 5 === 0) {
+    console.log("buzz");
+  } else {
+    console.log(i);
   }
 }
-// // stampo in console la tabellina del 3
-// for (let i = 1; i <= 100; i++) {
-//   console.log(`3 x ${i} = ${3 * i}`);
-// }
-// // stampo in console la tabellina del 5
-// for (let i = 1; i <= 100; i++) {
-//   console.log(`5 x ${i} = ${5 * i}`);
-// }
-
